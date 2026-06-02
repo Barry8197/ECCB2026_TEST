@@ -19,7 +19,7 @@ Template repository for a full-day workshop on biological networks, multi-omics 
 ### Session 3 - Building Agentic LLM Workflows for Biomedical Knowledge Graphs
 - 14:00 - 14:30: What is an LLM agent?
 - 14:30 - 15:00: Tool Use and Model Context Protocol (MCP)
-- 14:30 - 16:00: Practical Session 3 - Querying LLM agents with Molecular Profiles
+- 15:00 - 16:00: Practical Session 3 - Querying LLM agents with Molecular Profiles
 - 16:00 - 16:15: Coffee Break
 
 ### Session 4 - Knowledge Graph Query using Multi-Omics and LLMs & Mini-Challenge
