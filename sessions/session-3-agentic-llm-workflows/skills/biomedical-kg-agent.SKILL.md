@@ -57,7 +57,7 @@ For multi-omic profile questions:
 
 ## Querying the graph in this repository
 
-The graph and profile operations are implemented in `src/graph_tools.py`. In a  
+The graph and profile operations are implemented in `src/mofa_tools.py`. In a  
 coding-agent setting (no pre-registered tools), call them yourself by running  
 Python from the repository root. The relevant functions are:
 
@@ -72,7 +72,7 @@ Example (resolve the phenotype, then rank candidates):
 
 ```
 python -c "
-from src.graph_tools import build_toy_graph, search_nodes, rank_candidate_genes
+from src.mofa_tools import build_toy_graph, search_nodes, rank_candidate_genes
 g = build_toy_graph()
 pheno = search_nodes(g, 'autism')[0]['node_id']
 for row in rank_candidate_genes(g, 'P001', pheno):

@@ -33,7 +33,7 @@ ECCB2026/
 The repository includes a starter MCP server for Session 3:
 
 *   [Toy MCP server](server/toy_kg_mcp_server.py)
-*   [Underlying graph tools](src/graph_tools.py)
+*   [Underlying graph tools](src/mofa_tools.py)
 
 This is designed as an instructor demo first and an optional participant extension. The main practical can still be notebook-first so the workshop does not depend on everyone configuring an MCP client during the session.
 
@@ -45,7 +45,7 @@ Install the starter Python dependencies with:
 python3 -m pip install -r requirements.txt
 ```
 
-The first scaffold includes a tiny toy graph in `src/graph_tools.py` so the LLM-agent workflow can be prototyped before the final Session 1 and Session 2 outputs are ready.
+The first scaffold includes a tiny toy graph in `src/mofa_tools.py` so the LLM-agent workflow can be prototyped before the final Session 1 and Session 2 outputs are ready.
 
 ## Model Access Options
 

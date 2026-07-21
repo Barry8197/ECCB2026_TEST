@@ -1,7 +1,7 @@
 # Session 3 — Framework Plan & TODO
 
 The three notebook tracks all answer the **same task** against the same  
-`src/graph_tools.py` backend:
+`src/mofa_tools.py` backend:
 
 > For profile `P001`, which genes connected to autism spectrum disorder  
 > should we prioritize, and why? → `SHANK3, SCN2A, CHD8`
@@ -39,7 +39,7 @@ How the LLM is given Python functions and decides when to call them.
 | Google ADK | Google's Agent Development Kit; Google-leaning. | https://google.github.io/adk-docs/ |
 
 **➡️ Tentative choice: LangChain.** Minimal surprise for participants, `@tool`  
-wraps our existing `graph_tools.py` functions, and  
+wraps our existing `mofa_tools.py` functions, and  
 it keeps notebook 01 the simplest possible "LLM calls a Python function" demo.
 
 ---
@@ -64,7 +64,7 @@ pulled back into the agent.
 | Raw MCP client SDK | Direct protocol calls; loses the "agent code barely changes" payoff. | https://github.com/modelcontextprotocol/python-sdk |
 
 **➡️ Tentative choice: FastMCP server + langchain-mcp-adapters client.**  
-FastMCP exposes the same `graph_tools.py` functions with a decorator each;  
+FastMCP exposes the same `mofa_tools.py` functions with a decorator each;  
 langchain-mcp-adapters then loads them into the identical agent shape from  
 notebook 01. 
 
@@ -116,7 +116,7 @@ first-class concept, and it's not tied to one model provider. 
 
 ## General plan / build order
 
-1.  **Finalise** `**graph_tools.py**` as the single shared backend  
+1.  **Finalise** `**mofa_tools.py**` as the single shared backend  
     (confirm tool set with Session 1 folks — current tools are dummies).
 2.  **Notebook 01 — LangChain tool calling**  
     \- Wrap `search_nodes`, `get_neighbors`, `rank_profile_features`,  
