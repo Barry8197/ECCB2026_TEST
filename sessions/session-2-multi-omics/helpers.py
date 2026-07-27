@@ -233,7 +233,7 @@ def fit_factor_classifier(factors_df, y, train_ids, test_ids, model_name):
     clf = LogisticRegression(
         max_iter=2000,
         class_weight="balanced",
-        random_state=RANDOM_STATE,
+        random_state=42,
     )
     clf.fit(factors_df.loc[train_ids], y.loc[train_ids])
     pred = clf.predict(factors_df.loc[test_ids])
@@ -373,8 +373,7 @@ def generate_diagnostic_plots(mofa_model_mfx, factors_df, factor_r2_summary, vie
     )
 
     plot_confusion_matrix(
-        y_test, mofa_pred,
-        output_dir / "part2_mofa_confusion_matrix.png",
+        y_test, mofa_pred
     )
 
     plot_ranked_feature_weights(
@@ -415,8 +414,6 @@ def evaluate_predictions(y_true: np.ndarray, y_pred: np.ndarray, title: str) -> 
     -----
     - `y_true` and `y_pred` should be 1D arrays of the same length containing
       class labels (typically integer-encoded).
-    - This function relies on a `class_names` variable being defined in the
-      surrounding scope and passed to `classification_report` as `target_names`.
 
     Parameters
     ----------
