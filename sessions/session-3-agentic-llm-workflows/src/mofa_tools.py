@@ -49,8 +49,7 @@ import mofax as mfx
 # Configuration
 # ---------------------------------------------------------------------------
 RANDOM_STATE = 42
-# DATA_DIR = Path("../../data_tmp/TCGA-BRCA")
-# OUTPUT_DIR = Path("outputs").resolve()
+OUTPUT_DIR = Path("outputs").resolve()
 
 TEST_SIZE = 0.25
 N_TOP_VARIABLE_HIGH_DIM_FEATURES = 2000
