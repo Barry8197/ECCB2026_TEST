@@ -20,13 +20,21 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Sequence
+
+import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from sklearn.metrics import (
     accuracy_score,
     balanced_accuracy_score,
-    classification_report
+    classification_report,
+    ConfusionMatrixDisplay
 )
+from sklearn.linear_model import LogisticRegression
+
+from mofapy2.run.entry_point import entry_point
+import mofax as mfx
 
 __all__ = [
     "load_omics",
