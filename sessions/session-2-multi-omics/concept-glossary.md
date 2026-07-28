@@ -1,4 +1,6 @@
-# Glossary - Session 2 : Creating Multi-Omics Profiles
+# Glossary 
+
+# Session 2 : Creating Multi-Omics Profiles
 
 ## Global concepts across all parts
 

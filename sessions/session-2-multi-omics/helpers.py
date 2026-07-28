@@ -637,7 +637,7 @@ def plot_confusion_matrix(y_test, y_pred):
     """
     fig, ax = plt.subplots(figsize=(5, 5))
     ConfusionMatrixDisplay.from_predictions(y_test, y_pred, xticks_rotation=45, ax=ax)
-    ax.set_title("Confusion matrix — MOFA factors")
+    ax.set_title("Confusion matrix")
     fig.tight_layout()
     plt.show()
 
