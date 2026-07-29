@@ -1,5 +1,5 @@
 Custom Function Definitions
 ============================
 
-.. automodule:: helpers
+.. automodule:: s1_helpers
     :members:
