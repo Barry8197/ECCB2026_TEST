@@ -1,6 +1,12 @@
 # Package requirements for each session 
 
-## Session 1 - Netwworks Intro
+## Session 1 - Networks Intro
+pandas
+networkx
+matplotlib
+seaborn
+scipy      # required by networkx spring_layout at this graph size
+pyarrow    # data-prep only (build_kg_data.py), not needed by participants
 
 ## Session 2 - Multi-Omics
 
