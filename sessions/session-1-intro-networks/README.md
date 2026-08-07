@@ -1,5 +1,8 @@
 # Session 1: Introduction to Biological Networks and Knowledge Graphs
 
+**New here?** [`session-story.md`](session-story.md) is a one-page narrative of what
+this session does and what it finds — read that first, then the notebooks.
+
 ## Learning Goals
 - Understand core network concepts and graph terminology
 - Understand what a biomedical knowledge graph is, and how it differs from an
@@ -26,6 +29,7 @@ python ../../tools/make_participant_version.py "part-*.ipynb"
 ## Layout
 
 ```text
+session-story.md the one-page narrative of the session
 data/            generated knowledge graph CSVs (committed, small)
 data-prep/       developer scripts - build_kg_data.py, make_images.py
 images/          diagrams used by the notebooks
