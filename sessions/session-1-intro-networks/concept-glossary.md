@@ -40,6 +40,18 @@
 | **SSSOM** | Simple Standard for Sharing Ontological Mappings — the file format MONDO publishes its cross-references in (`mondo.sssom.tsv`). |
 | **DisGeNET** | A widely cited gene–disease database. Commercially licensed since 2024, so it cannot be redistributed in a public teaching repository. |
 | **Ensembl gene ID** | Stable gene identifier of the form `ENSG00000012048`. The identifier space shared by Open Targets and the Session 2 TCGA-BRCA matrix, which is what lets the two join. |
+| **TCGA-BRCA** | The Cancer Genome Atlas breast cancer cohort. Source of the expression matrix in `coexpr_expression.csv.gz` (500 patients × 737 genes) and of the multi-omics data in Session 2. |
+
+### Co-expression (Part 1 §7)
+
+| Term | Definition |
+| --- | --- |
+| **Co-expression** | Two genes whose expression rises and falls together across patients. Evidence that they are *regulated* together — which may mean they work together, or merely that both track a third thing like proliferation. |
+| **Correlation matrix** | Every gene correlated against every other. 737 genes give 271,216 pairs. The diagonal (each gene with itself) is zeroed, otherwise it dominates any ranking. |
+| **Correlation threshold** | The cut-off above which a correlation becomes an edge. **There is no principled value.** Sweeping 0.3 → 0.8 takes the same data from 39,593 edges to 200, and every one of those networks is defensible. |
+| **Proliferation confound** | The dominant structure in any tumour co-expression network: cell-cycle genes correlate with each other and with anything expressed in dividing cells. Responsible for `TOP2A`, `BUB1B` and `KNL1` appearing next to `BRCA1`. Not a discovery. |
+| **Corroboration** | The same relationship supported by two sources whose errors are *independent* — e.g. `BRCA2`–`BRIP1` both curated as causal and co-expressed. Strong. Contrast with the tubulins, where both sources fail for related reasons. |
+| **Candidate** | A gene co-expressed with a disease's causal genes that carries no curated edge to that disease. Where gene–disease discovery lives — and where the proliferation confound also lands, indistinguishably. |
 | **Association score** | Open Targets' 0–1 summary of gene–disease evidence. **Not a probability** — a weighted aggregation across evidence types, so a high score can reflect genetics *or* drug treatment. |
 | **Evidence count** | How many individual pieces of evidence support an association. |
 | **Evidence type (datatype)** | The *kind* of claim behind an association: `genetic_association`, `somatic_mutation`, `known_drug`, `literature`, `rna_expression`, `animal_model`, `affected_pathway`, `genetic_literature`. Kept in `kg_evidence.csv`. |

@@ -121,7 +121,7 @@ def curated_vs_inferred():
     ax.text(2.3, 0.25,
             "edges are $\\bf{computed}$\ncorrelation above a threshold,\ncalculated from our data",
             ha="center", fontsize=9.5, color=GREY)
-    ax.set_title("Inferred network\n(gene co-expression, Session 2)",
+    ax.set_title("Inferred network\n(gene co-expression, Part 1 §7)",
                  fontsize=11.5, weight="bold")
     ax.set_xlim(0.2, 4.4); ax.set_ylim(-0.3, 4.3); ax.axis("off")
 

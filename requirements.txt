@@ -2,6 +2,7 @@
 
 ## Session 1 - Networks Intro
 pandas
+numpy
 networkx
 matplotlib
 seaborn
