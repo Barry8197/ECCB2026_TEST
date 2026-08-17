@@ -4,7 +4,7 @@
 
 | Item | Value |
 |---|---|
-| **Model** | [`claude-haiku-4-5`](https://www.anthropic.com/claude/haiku) ([announcement](https://www.anthropic.com/news/claude-haiku-4-5)) — Anthropic's fastest/cheapest tier; chosen because the notebooks' pedagogical core is tool-calling mechanics, which Haiku handles flawlessly (correct tool selection, grounded answers), at ~1/3 the price of Sonnet. Caveat: thinner biological interpretation than bigger models. |
+| **Model** | [`claude-haiku-4-5`](https://www.anthropic.com/claude/haiku) |
 | **Per person, one clean pass** (measured 2026-08-17) | **$0.22** |
 | **Per person, realistic** (room for 2–3× cell re-runs + 03 run-length variance) | **~$1.00** |
 | **50-person audience** | **~$50 expected; set a $100 workspace spend cap** |
