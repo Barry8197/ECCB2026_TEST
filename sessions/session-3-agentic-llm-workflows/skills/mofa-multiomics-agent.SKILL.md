@@ -7,20 +7,20 @@ description: Analyse a fitted MOFA multi-omics model of TCGA breast-cancer data 
 
 ## Purpose
 
-Use this skill when answering questions about a **fitted MOFA model** of TCGA
+Use this skill when answering questions about a fitted MOFA model of TCGA
 breast-cancer multi-omics data (transcriptomics, proteomics, methylation) with
-PAM50 subtype labels — factor interpretation, factor↔subtype association, factor
+PAM50 subtype labels: factor interpretation, factor↔subtype association, factor
 drivers (weights), subtype prediction from factors, and diagnostic plots.
 
 ## Behaviour
 
 - Always compute results with the repo's functions before making quantitative
   claims about factors, R2, associations, weights, or predictions.
-- **Load the cached MOFA model; never re-fit.** Fitting is expensive and
+- Load the cached MOFA model; never re-fit. Fitting is expensive and
   non-deterministic. A fitted model is cached under `outputs/*.hdf5`; load it.
 - Refer to factors by name (`Factor1`…`Factor10`) and subtypes by PAM50 label
   (LumA, LumB, Basal, Her2, Normal).
-- Distinguish *evidence* (numbers from the tools) from *interpretation* (what
+- Distinguish evidence (numbers from the tools) from interpretation (what
   they suggest biologically).
 - Do not present associations as clinical diagnosis or treatment advice; a
   gene/probe weighting is a statistical loading, not a validated biomarker.
@@ -100,5 +100,5 @@ To generate the diagnostic PNGs, call `generate_diagnostic_plots(...)` with the
 fitted `model`, `factors`, the active factors, the `assoc` table, the train ids,
 `y_train`, `y_test`, and the classifier predictions, writing to `outputs/`.
 
-Always run the functions first and base **Evidence Used** on their real output —
+Always run the functions first and base Evidence Used on their real output,
 never invent factor numbers, R2 values, associations, or metrics.
