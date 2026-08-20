@@ -1,4 +1,5 @@
-# Hands-on Practice Session
+# Session 3: Agentic LLM workflow
+Hands-on Practice Session
 
 Session 3 main materials are split into three notebooks. Each one utilises the same queries suggested by Session 1 & 2, then changes the interface around the same data/tools/workflows.
 
