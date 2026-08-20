@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+outputs
 __pycache__/
 *.py[codz]
 *$py.class
@@ -223,3 +224,6 @@ __marimo__/
 
 # Large/generated data files
 *.pkl
+
+# MyST build outputs
+_build
