@@ -263,4 +263,3 @@ dependencies:
       - uc-micro-py==2.0.0
       - wrapt==2.2.2
       - zarr==3.1.6
-prefix: /home/bryan/miniconda3/envs/eccb2026
