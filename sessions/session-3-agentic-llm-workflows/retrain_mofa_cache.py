@@ -46,10 +46,19 @@ def main(dry_run: bool) -> None:
 
     data, view_names, feature_names, sample_names, group_names = \
         build_mofa_matrix_input(X_train)
+    if OUTFILE.exists():
+        OUTFILE.unlink()  # fit_mofa only saves when the outfile is absent
     print(f"fitting MOFA (max {MAX_FACTORS} factors, {ITERATIONS} max iters) ...")
     fit_mofa(data, view_names, feature_names, sample_names, group_names,
              MAX_FACTORS, ITERATIONS, RANDOM_STATE, OUTFILE)
-    print(f"saved    : {OUTFILE}")
+
+    import mofax as mfx
+    m = mfx.mofa_model(str(OUTFILE))
+    n_model = m.get_factors(df=True).shape[0]
+    m.close()
+    assert n_model == len(train_ids), (
+        f"saved model has {n_model} samples but the split has {len(train_ids)} - save failed?")
+    print(f"saved    : {OUTFILE}  ({n_model} training samples, verified)")
 
 
 if __name__ == "__main__":
