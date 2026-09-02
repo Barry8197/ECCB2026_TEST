@@ -9,7 +9,7 @@ keep matching the plots the notebooks produce.
 
 Outputs to ../images/:
     kg_schema.png            the three node types and how they connect
-    curated_vs_inferred.png  knowledge graph vs co-expression network
+    curated_vs_computed.png  knowledge graph vs co-expression network
     bipartite_projection.png collapsing genes-and-diseases onto diseases alone
     ontology_climb.png       inheriting an ICD-10 code from an ancestor
 
@@ -105,7 +105,7 @@ def kg_schema():
            "The schema: three node types, three edge types")
 
 
-def curated_vs_inferred():
+def curated_vs_computed():
     """Why a knowledge graph is a different object from a co-expression network."""
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.6))
 
@@ -121,7 +121,7 @@ def curated_vs_inferred():
     ax.text(2.3, 0.25,
             "edges are $\\bf{computed}$\ncorrelation above a threshold,\ncalculated from our data",
             ha="center", fontsize=9.5, color=GREY)
-    ax.set_title("Inferred network\n(gene co-expression, Part 1 §7)",
+    ax.set_title("Computed network\n(gene co-expression, Part 1 §7)",
                  fontsize=11.5, weight="bold")
     ax.set_xlim(0.2, 4.4); ax.set_ylim(-0.3, 4.3); ax.axis("off")
 
@@ -150,10 +150,10 @@ def curated_vs_inferred():
               loc="upper right", fontsize=8.5, frameon=False)
 
     fig.tight_layout()
-    fig.savefig(OUT / "curated_vs_inferred.png", dpi=DPI, bbox_inches="tight",
+    fig.savefig(OUT / "curated_vs_computed.png", dpi=DPI, bbox_inches="tight",
                 facecolor="white")
     plt.close(fig)
-    print("  wrote curated_vs_inferred.png")
+    print("  wrote curated_vs_computed.png")
 
 
 def bipartite_projection():
@@ -261,7 +261,7 @@ if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     print(f"Writing diagrams to {OUT}/")
     kg_schema()
-    curated_vs_inferred()
+    curated_vs_computed()
     bipartite_projection()
     ontology_climb()
     print("done")

@@ -5,11 +5,11 @@ This is a DEVELOPER script, not something workshop participants run. It reads th
 full workshop multi-omics bundle (~900 MB, not in this repository), takes the
 transcriptomics view, and cuts it down to just the genes that are already nodes
 in the knowledge graph. The result is small enough to commit, so Part 1 can build
-a real inferred network without anyone downloading anything.
+a real computed network without anyone downloading anything.
 
 Why this subset
 ---------------
-Part 1 contrasts an *inferred* network (computed from measurements) with a
+Part 1 contrasts an *computed* network (computed from measurements) with a
 *curated* knowledge graph (read from recorded facts). That contrast is much
 sharper when both networks describe the **same genes**: any difference is then a
 difference in how the edges were obtained, not a difference in which genes were

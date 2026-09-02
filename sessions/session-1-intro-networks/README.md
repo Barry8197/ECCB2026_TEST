@@ -6,19 +6,19 @@ this session does and what it finds — read that first, then the notebooks.
 ## Learning Goals
 - Understand core network concepts and graph terminology
 - Understand what a biomedical knowledge graph is, and how it differs from an
-  inferred network — by building one of each over the same genes
+  computed network — by building one of each over the same genes
 - Build and query a knowledge graph using NetworkX
 - Recognise annotation sparsity and identifier mismatches — the two failure modes
   that matter most in practice
-- Combine curated and inferred evidence to separate corroboration from candidates
+- Combine curated and computed evidence to separate corroboration from candidates
 
 ## Notebooks
 
 | Notebook | Agenda slot | Contents |
 |---|---|---|
-| [`part-1-networks-and-knowledge-graphs.ipynb`](part-1-networks-and-knowledge-graphs.ipynb) | 09:10–09:40 | Graph vocabulary, inferred vs curated networks, the schema, data sources and licences, and building a co-expression network alongside the graph (§7) |
+| [`part-1-networks-and-knowledge-graphs.ipynb`](part-1-networks-and-knowledge-graphs.ipynb) | 09:10–09:40 | Graph vocabulary, computed vs curated networks, the schema, data sources and licences, and building a co-expression network alongside the graph (§7) |
 | [`part-2-building-a-knowledge-graph.ipynb`](part-2-building-a-knowledge-graph.ipynb) | 09:40–10:10 | Building the graph in NetworkX, degree and hubs, association scores, sparsification, annotation sparsity |
-| [`part-3-querying-the-knowledge-graph.ipynb`](part-3-querying-the-knowledge-graph.ipynb) | 10:10–10:45 | **Practical.** ICD-10 coverage and ontology climbing (§A), shared-gene projection, separating cause from treatment, community detection (§B), bridging to the Session 2 omics data (§C, stretch), curated and inferred networks together (§D, closing) |
+| [`part-3-querying-the-knowledge-graph.ipynb`](part-3-querying-the-knowledge-graph.ipynb) | 10:10–10:45 | **Practical.** ICD-10 coverage and ontology climbing (§A), shared-gene projection, separating cause from treatment, community detection (§B), bridging to the Session 2 omics data (§C, stretch), curated and computed networks together (§D, closing) |
 
 Participant ("fill in the blanks") copies live in `participant/` and are generated
 from the solution notebooks — never edit them by hand:
@@ -52,7 +52,7 @@ each gene–disease edge by kind of evidence. Built from
 
 **The expression matrix.** `coexpr_expression.csv.gz` — 500 patients × 737 genes
 of TCGA-BRCA transcriptomics, subset to genes that are already graph nodes. Part 1
-§7 builds an inferred co-expression network from it, and Part 3 §D puts the two
+§7 builds a computed co-expression network from it, and Part 3 §D puts the two
 networks together. 1.1 MB, so it needs no external download.
 
 See [`data/README.md`](data/README.md) for provenance and licences.
